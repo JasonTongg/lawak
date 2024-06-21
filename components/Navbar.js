@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import Logo from "../public/assets/Logo.webp";
-import Image from "next/image";
 
 export default function Navbar() {
   return (
