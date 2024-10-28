@@ -1,4 +1,4 @@
-import "../app/globals.css";
+import "../styles/globals.css";
 import Layout from "../layout/default";
 import { Provider } from "react-redux";
 import Store from "../store/store";

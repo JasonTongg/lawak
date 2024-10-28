@@ -1,18 +1,16 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setData } from "../store/data";
+import About from "@/components/About";
+import HowToBuy from "@/components/HowToBuy";
+import Tokenomics from "@/components/Tokenomics";
+import Hero from "@/components/Hero";
 
-export default function index() {
-  const dispatch = useDispatch();
-  const stateData = useSelector((state) => state.data.stateData);
-
-  const handleChange = () => {
-    dispatch(setData("change text"));
-  };
+export default function index(props) {
   return (
-    <div className="">
-      <p>{stateData.data}</p>
-      <button onClick={handleChange}>change text</button>
+    <div className="w-full">
+      <Hero />
+      <About {...props} />
+      <HowToBuy />
+      <Tokenomics />
     </div>
   );
 }
