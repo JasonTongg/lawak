@@ -24,15 +24,17 @@ export default function Navbar({
     setAnchorEl(null);
   };
   return (
-    <nav className="flex w-full p-4 items-center justify-between gap-4 padding-section fixed max-w-screen-2xl px-4 sm:px-6 lg:px-8 top-0 left-1/2 translate-x-[-50%]">
+    <nav className="flex w-full z-[99] p-4 items-center justify-between gap-4 padding-section fixed max-w-screen-2xl px-4 sm:px-6 lg:px-8 top-0 left-1/2 translate-x-[-50%]">
       <Image src={Logo} className="w-[65px]" />
       <div className="items-center justify-center gap-5 md:flex hidden">
         <Link href="#about">About</Link>
         <Link href="#how">How to Buy</Link>
         <Link href="#token">Tokenomics</Link>
+        <Link href="#social">Social</Link>
       </div>
       <Link
         href={uniswapUrl}
+        target="_blank"
         className="text-primary py-2 px-4 border-2 border-primary rounded-[20px] font-bold md:block hidden"
       >
         BUYNOW
@@ -59,6 +61,9 @@ export default function Navbar({
           </Link>
           <Link href="#token" onClick={handleClose}>
             <MenuItem>Tokenomics</MenuItem>
+          </Link>
+          <Link href="#social" onClick={handleClose}>
+            <MenuItem>Social</MenuItem>
           </Link>
           <Link href={twitter} onClick={handleClose} target="_blank">
             <MenuItem>Twitter</MenuItem>

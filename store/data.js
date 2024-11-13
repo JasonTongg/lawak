@@ -4,8 +4,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
   address: "0x0000000000000000000000000000000000000000",
   pairAddress: "0x0000000000000000000000000000000000000001",
-  twitter: "https://x.com/Pumpkin_HeadETH",
-  telegram: "https://t.me/pumpkinhead_ERC",
+  twitter: "https://x.com/",
+  telegram: "https://t.me/",
   dextoolsUrl: "",
   uniswapUrl: "",
   dexscreenerUrl: "",

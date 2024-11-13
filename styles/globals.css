@@ -40,3 +40,7 @@ html::-webkit-scrollbar {
 img {
   pointer-events: none;
 }
+
+.MuiList-padding {
+  padding: 0 !important;
+}

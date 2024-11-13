@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import { useSelector } from "react-redux";
 import { fetchDexscreener, fetchDextools, fetchUniswap } from "@/store/data";
 import Store from "@/store/store";
+import HowToBuy from "@/components/HowToBuy";
 
 export default function Index() {
   // Use useSelector to get the relevant state from Redux
@@ -41,40 +42,22 @@ export default function Index() {
     };
   }, []);
 
+  const props = {
+    address,
+    twitter,
+    telegram,
+    dextoolsUrl,
+    uniswapUrl,
+    dexscreenerUrl,
+  };
+
   return (
     <div className="w-full relative">
-      <Hero
-        address={address}
-        twitter={twitter}
-        telegram={telegram}
-        dextoolsUrl={dextoolsUrl}
-        uniswapUrl={uniswapUrl}
-        dexscreenerUrl={dexscreenerUrl}
-      />
-      <About
-        address={address}
-        twitter={twitter}
-        telegram={telegram}
-        dextoolsUrl={dextoolsUrl}
-        uniswapUrl={uniswapUrl}
-        dexscreenerUrl={dexscreenerUrl}
-      />
-      <Tokenomics
-        address={address}
-        twitter={twitter}
-        telegram={telegram}
-        dextoolsUrl={dextoolsUrl}
-        uniswapUrl={uniswapUrl}
-        dexscreenerUrl={dexscreenerUrl}
-      />
-      <Social
-        address={address}
-        twitter={twitter}
-        telegram={telegram}
-        dextoolsUrl={dextoolsUrl}
-        uniswapUrl={uniswapUrl}
-        dexscreenerUrl={dexscreenerUrl}
-      />
+      <Hero {...props} />
+      <About {...props} />
+      <HowToBuy {...props} />
+      <Tokenomics {...props} />
+      <Social {...props} />
     </div>
   );
 }

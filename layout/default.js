@@ -13,9 +13,10 @@ export default function Default({ children }) {
     dexscreenerUrl,
     uniswapUrl,
     dextoolsUrl,
+    pairAddress,
   } = useSelector((state) => state.data);
   dispatch(fetchDexscreener(address));
-  dispatch(fetchDextools(address));
+  dispatch(fetchDextools(pairAddress));
   dispatch(fetchUniswap(address));
 
   const [isMounted, setIsMounted] = useState(false);
@@ -37,7 +38,7 @@ export default function Default({ children }) {
   if (!isMounted) return null;
 
   return (
-    <main className="flex flex-col items-center justify-between gap-6 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen overflow-x-hidden relative">
+    <main className="flex flex-col items-center justify-between w-full min-h-screen overflow-x-hidden relative">
       <Navbar {...additionalProps} />
       {children}
       <Footer />
