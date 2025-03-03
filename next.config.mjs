@@ -1,28 +1,7 @@
 // next.config.mjs
-import TerserPlugin from "terser-webpack-plugin";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.optimization.minimizer = [
-        new TerserPlugin({
-          terserOptions: {
-            compress: {
-              drop_console: true, // Menghapus semua console.log dari produksi
-            },
-            mangle: true, // Mengacak nama variabel
-            format: {
-              comments: false, // Menghilangkan semua komentar dari kode produksi
-            },
-          },
-          extractComments: false,
-        }),
-      ];
-    }
-    return config;
-  },
-
   // Tambahkan headers untuk Content Security Policy
   // async headers() {
   //   return [

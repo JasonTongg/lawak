@@ -26,7 +26,7 @@ export default function Document() {
         <meta property="og:image" content="https://Domain/assets/FileName" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://Domain/" />
+        <meta property="twitter:url" content="https://Domain/assets/FileName" />
         <meta property="twitter:title" content="Title Content" />
         <meta property="twitter:description" content="Description Content" />
         <meta
